@@ -22,11 +22,10 @@ body {
 
 .slides {
     width: 100%;
-    /* 设置为100vh以撑满整个视口高度 */
+    /* 保持全屏高度 */
     height: 100vh;
     position: relative;
     display: flex;
-    /* 增加过渡时间从0.5s到1s */
     transition: transform 1s ease-in-out;
 }
 
@@ -36,10 +35,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 改为cover以确保图片撑满整个容器，不留黑边 */
-    object-fit: cover;
+    /* 改为contain以确保图片完全可见，两侧可能会有补白 */
+    object-fit: contain;
+    /* 添加黑色背景，图片两侧会显示黑色补白 */
+    background-color:#eeedeb;
     opacity: 0;
-    /* 增加过渡时间从0.5s到1.2s，并使用ease效果使过渡更平滑 */
     transition: opacity 1.2s ease;
 }
 
