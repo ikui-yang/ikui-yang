@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slideInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % totalSlides; // 循环播放
             updateSlides();
-        }, 1500);
+        }, 3000); // 从1500ms增加到3000ms，使自动播放间隔更长
     }
 
     function stopAutoPlay() {
