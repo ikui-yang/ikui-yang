@@ -8,6 +8,15 @@ body {
     height: 100vh;
     /* 确保内容不超出视口 */
     overflow: hidden;
+    /* 添加全局无边框设置 */
+    border: none;
+}
+
+* {
+    /* 全局设置所有元素无边框 */
+    border: none;
+    box-sizing: border-box;
+    outline: none;
 }
 
 .photo-album {
@@ -170,26 +179,26 @@ body {
     left: 50px;         /* 从20px增加到50px，向中间移动 */
     z-index: 999;       /* 提高层级确保显示在最上层 */
     background: none;
-    border: 2px solid white;    /* 添加白色边框 */
-    border-radius: 50%;         /* 使边框呈圆形 */
+    border: none;       /* 替换实心边框为半透明背景 */
+    border-radius: 50%; /* 使边框呈圆形 */
     color: white;
-    font-size: 2rem;            /* 调小图标尺寸 */
-    line-height: 1;             /* 确保行高为1，避免额外间距 */
+    font-size: 2rem;    /* 调小图标尺寸 */
+    line-height: 1;     /* 确保行高为1，避免额外间距 */
     cursor: pointer;
     opacity: 0.7;
     transition: all 0.3s;
-    padding: 0;                 /* 移除内边距 */
-    width: 50px;                /* 固定宽度 */
-    height: 50px;               /* 固定高度 */
-    display: flex;              /* 使用flex布局 */
+    padding: 0;         /* 移除内边距 */
+    width: 50px;        /* 固定宽度 */
+    height: 50px;       /* 固定高度 */
+    display: flex;      /* 使用flex布局 */
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .play-control:hover {
     opacity: 1;
     transform: scale(1.1);
-    border-color: #fff;        /* 悬停时边框颜色加深 */
     box-shadow: 0 0 10px rgba(255,255,255,0.3); /* 添加发光效果 */
 }
 
